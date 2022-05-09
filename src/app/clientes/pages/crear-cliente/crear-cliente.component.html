@@ -2,27 +2,24 @@
 <hr>
 
 <div class="container ">
-
-    <div class="col-4"> </div>
-    <div class="col-4">
         
-        <div class="row">
-    <form class="form-container" autocomplete="off" (ngSubmit)="crearCliente()" [formGroup]="miFormulario">
+  <div class="row justify-content-center">
+    <form class="col col-md-6 " autocomplete="off" (ngSubmit)="crearCliente()" [formGroup]="miFormulario">
             
             <label  class="form-label" >Nombres</label>
             <input formControlName="nombres" class="form-control" type="text" placeholder="Ingresa tu(s) nombre(s)" >
             
             <label class="form-label" >Apellido paterno</label>
-            <input formControlName="apellidoPaterno"  class="form-control" type="text" placeholder="" >
+            <input formControlName="apellidoPaterno"  class="form-control" type="text" placeholder="Ingresa tu apellido paterno" >
             
             <label class="form-label">Apellido materno</label>
-            <input formControlName="apellidoMaterno" class="form-control" type="text" placeholder="" >
+            <input formControlName="apellidoMaterno" class="form-control" type="text" placeholder="Ingresa tu apellido materno" >
             
             <label class="form-label">Domicilio</label>
-            <input formControlName="domicilio" class="form-control" type="text" placeholder="" >
+            <input formControlName="domicilio" class="form-control" type="text" placeholder="Ingresa tu domicilio" >
             
             <label class="form-label">Correo electronico</label>
-            <input formControlName="email" class="form-control" type="text" placeholder="" >
+            <input formControlName="email" class="form-control" type="text" placeholder="Ingresa tu email" >
             
   
             
@@ -30,5 +27,4 @@
         
         </form>
     </div>
-</div>
 </div>

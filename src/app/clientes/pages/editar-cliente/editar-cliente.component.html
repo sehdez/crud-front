@@ -3,15 +3,12 @@
 
 <div *ngIf="!cliente">
     <h2 class="mt-3">Cargando datos del cliente, por favor espere...</h2>
-  </div>
+</div>
 
 <div class="container " *ngIf="cliente">
-
-    <div class="col-4"> </div>
-    <div class="col-4">
         
-        <div class="row">
-    <form class="form-container" autocomplete="off" (ngSubmit)="actualizarCliente()" [formGroup]="miFormulario">
+    <div class="row justify-content-center">
+    <form class="col col-md-6" autocomplete="off" (ngSubmit)="actualizarCliente()" [formGroup]="miFormulario">
             
             <label  class="form-label" >Nombres</label>
             <input formControlName="nombres" class="form-control" type="text" placeholder="Ingresa tu(s) nombre(s)" >
@@ -34,5 +31,4 @@
         
         </form>
     </div>
-</div>
 </div>

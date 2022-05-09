@@ -16,6 +16,7 @@ export class ListarClientesComponent implements OnInit {
 
   clientes!: Cliente[];
   clientesTotales = 0;
+  hayClientes = true;
   cargando!:boolean;
 
   ngOnInit(): void {
@@ -29,7 +30,11 @@ export class ListarClientesComponent implements OnInit {
         .subscribe( (clientes:Clientes) => {
             this.clientes = clientes.data.clientes;
             this.clientesTotales = clientes.data.clientesTotales;
+            this.clientes.shift();
             this.cargando = false;
+            if ( this.clientes.length === 0 ){
+              this.hayClientes = false;
+            }
         })
   }
 

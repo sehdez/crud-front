@@ -26,15 +26,18 @@
         <td>{{ cliente.domicilio }}</td>
         <td>{{ cliente.email }}</td>
         <td> 
-          <button class="btn btn-danger me-1" type="button"  (click)="eliminar( cliente.id , i)" >
+          <button class="btn btn-danger me-1 mb-1 " type="button"  (click)="eliminar( cliente.id , i)" >
               Eliminar
           </button> 
-          <button [routerLink]="'./editar/'+ cliente.id" type="button" class="btn btn-primary" > 
+          <button [routerLink]="'./editar/'+ cliente.id" type="button" class="mb-1 btn btn-primary" > 
              Actualizar
           </button> </td>
       </tr>
     </tbody>
   </table>
+  <div *ngIf="!hayClientes">
+    <h2 class="mt-3">No hay Clientes para mostrar</h2>
+  </div>
 
 
   

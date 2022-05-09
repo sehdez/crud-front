@@ -19,7 +19,7 @@ export class CrearClienteComponent implements OnInit {
 
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";                
   miFormulario: FormGroup = this.fb.group({
-    nombres:['qweqwe', [Validators.required, Validators.minLength(3)]],
+    nombres:['', [Validators.required, Validators.minLength(3)]],
     apellidoPaterno:['', [Validators.required, Validators.minLength(3)]],
     apellidoMaterno:['', [Validators.required, Validators.minLength(3)]],
     domicilio:['', [Validators.required, Validators.minLength(3)]],

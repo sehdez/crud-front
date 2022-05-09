@@ -1,0 +1,40 @@
+<h2>Listado de clientes</h2>
+<hr>
+
+<div *ngIf="cargando">
+  <h2 class="mt-3">Cargando, por favor espere...</h2>
+</div>
+
+<table class="table" *ngIf="!cargando">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellido paterno</th>
+        <th scope="col">Apellido materno</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Email</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="row" *ngFor="let cliente of clientes; let i=index">
+        <td>{{ i+1 }}</td>
+        <td>{{ cliente.nombres }}</td>
+        <td>{{ cliente.apellidoPaterno }}</td>
+        <td>{{ cliente.apellidoMaterno }}</td>
+        <td>{{ cliente.domicilio }}</td>
+        <td>{{ cliente.email }}</td>
+        <td> 
+          <button class="btn btn-danger me-1" type="button"  (click)="eliminar( cliente.id , i)" >
+              Eliminar
+          </button> 
+          <button [routerLink]="'./editar/'+ cliente.id" type="button" class="btn btn-primary" > 
+             Actualizar
+          </button> </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  
